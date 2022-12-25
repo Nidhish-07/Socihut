@@ -1,6 +1,7 @@
 import React from 'react'
 import Post from './Post'
 import Share from './Share'
+import { Posts } from '../dummyData'
 
 const Feed = () => {
     return (
@@ -8,12 +9,8 @@ const Feed = () => {
             <div className='p-5'>
 
                 <Share></Share>
-                <Post></Post>
-                <Post></Post>
-                <Post></Post>
-                <Post></Post>
-                <Post></Post>
-                <Post></Post>
+                {Posts.map(post => (
+                    <Post key={post.id} post={post}></Post>))}
             </div>
         </div>
     )

@@ -5,7 +5,7 @@ import Person1 from "../assets/persons/person1.jpg"
 
 const Header = () => {
     return (
-        <div className='h-12 w-full bg-blue-500 flex items-center sticky top-0'>
+        <div className='h-12 w-full bg-blue-500 flex items-center sticky top-0 z-50'>
             {/* left div */}
             <div className='flex-[3] '>
                 <span className='text-2xl ml-5 text-white font-bold cursor-pointer'>Logo</span>
