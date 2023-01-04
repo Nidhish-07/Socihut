@@ -7,7 +7,7 @@ const morgan = require('morgan')
 const helmet = require('helmet')
 const mongoose = require('mongoose')
 
-const postRoute = require('./routes/index');
+const postRoute = require('./routes/posts');
 const usersRoute = require('./routes/users');
 const authRoute = require("./routes/auth")
 

@@ -41,10 +41,11 @@ router.post("/login", async (req, res) => {
         );
 
         if (!validPassword) {
-            return res.status(400).send("Wrong passowrd");
+            return res.status(400).send("Wrong password");
         }
 
-        res.status(200).json(user);
+        const { isAdmin, password, ...otherDetails } = user._doc
+        res.status(200).json(otherDetails);
     } catch (e) {
         res.status(500).json(e);
     }
